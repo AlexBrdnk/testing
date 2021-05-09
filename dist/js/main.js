@@ -1,0 +1,2 @@
+$(function(){$(".form__date").datepicker()});
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOlsiJCIsImRhdGVwaWNrZXIiXSwibWFwcGluZ3MiOiJBQUFBQSxFQUFFLFdBQ0VBLEVBQUcsZUFBZ0JDIiwiZmlsZSI6Im1haW4uanMiLCJzb3VyY2VzQ29udGVudCI6WyIkKGZ1bmN0aW9uKCl7XHJcbiAgICAkKCBcIi5mb3JtX19kYXRlXCIgKS5kYXRlcGlja2VyKCk7XHJcbn0pOyJdfQ==

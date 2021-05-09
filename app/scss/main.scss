@@ -1,0 +1,244 @@
+@import "fonts";
+
+body{
+    padding: 0;
+    margin: 0 auto;
+    color: #232323;
+    font-family: sans-serif;
+    background: rgba(107, 99, 99, 0.726);
+}
+h1, h2, h3, h4, h5{
+    padding: 0;
+    margin: 0;
+}
+h2{
+    font-size: 12px;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+input:focus, button:focus{
+    outline: none;
+}
+
+.form__content{
+    padding: 15px 14px 14px 50px;
+    border-radius: 5px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+.form__wp{
+    display: flex;
+    svg{
+        margin-right: 7px;
+    }
+    i{
+        color: #8b9198;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+    }
+}
+@mixin input {
+    font-family: 'FiraSans', sans-serif;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    font-size: 18px;
+}
+.form__input{
+    @include input();
+    width: 186px;
+    &::placeholder{
+        color: #6b6b6b;
+    }
+}
+.form__title{
+    margin-bottom: 9px;
+}
+.form__bord{
+    display: block;
+    width: 2px;
+    height: 31.75px;
+    background: #e9e9e9;
+    margin: 9px 29px 0;
+}
+.form__wrap{
+    display: flex;
+    align-items: center;
+}
+.form__date{
+    @include input();
+    width: 100px;
+}
+.form__cirk{
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: #9a9a9a;
+    margin: 25px 29px 0;
+}
+.ui-datepicker-prev{
+    position: relative;
+    &::after{
+        content: '<';
+        display: block;
+        position: absolute;
+        left: (28.8px - 9.3px)/2;
+        top: (28.8px - 18px)/2;
+    }
+}
+.ui-datepicker-next{
+    position: relative;
+    &::after{
+        content: '>';
+        display: block;
+        position: absolute;
+        right: (28.8px - 9.3px)/2;
+        top: (28.8px - 18px)/2;
+    }
+}
+.form__num{
+    width: 28px;
+    font-size: 16px;
+    color: #8b9198;
+    border: 1px solid #8b9198;
+    text-align: center;
+    padding: 4px 0;
+    margin-right: 48px;
+    appearance: textfield;
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        display: none;
+    }
+}
+.form__arrows{
+    position: relative;
+}
+@mixin number {
+    position: absolute;
+    right: 28px;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    color: #8b9198;
+    cursor: pointer;
+    &:hover{
+        color: #ed9915;
+    }
+}
+.number-minus{
+    @include number();
+    bottom: -4px;
+}
+.number-plus{
+    @include number();
+    top: -3px;
+}
+.form__plus{
+    border: none;
+    background: #fed18c;
+    font-size: 14px;
+    padding: 7px 9px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+.form__btn{
+    width: 175px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #ed9915;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 21.5px 0;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1199px) {
+    .container{
+        width: 960px;
+    }
+    .form__content{
+        padding: 15px 10px 14px 25px;
+    }
+    .form__wp svg{
+        width: 12px;
+        margin-right: 5px;
+    }
+    .form__input{
+        font-size: 16px;
+        width: 165px;
+    }
+    .form__bord{
+        margin: 9px 22px 0;
+    }
+    .form__date{
+        font-size: 15px;
+        width: 90px;
+    }
+    .form__cirk{
+        margin: 25px 22px 0;
+    }
+    .form__wp i{
+        margin-left: 7px;
+    }
+    .form__num {
+        width: 26px;
+        font-size: 14px;
+        margin-right: 32px;
+    }
+    .number-minus, .number-plus{
+        right: 10px;
+    }
+    h2{
+        font-size: 10px;
+    }
+    .form__btn{
+        width: 160px;
+        padding: 18.5px 0;
+    }
+}
+@media screen and (max-width: 991px) {
+    .container{
+        width: 720px;
+    }
+    .form__content{
+        flex-wrap: wrap;
+        padding-left: 50px;
+    }
+    .form__wrap{
+        margin-bottom: 20px;
+    }
+    .form__btn{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .container{
+        width: 540px;
+    }
+    .form__wrap:nth-child(2) .form__bord{
+        display: none;
+    }
+    .form__content{
+        padding-left: 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .container{
+        width: 320px;
+    }
+    .form__bord{
+        display: none;
+    }
+    .form__btn{
+        margin-left: 0;
+        width: 139px;
+        padding: 13.5px 0;
+        font-size: 14px;
+    }
+}
